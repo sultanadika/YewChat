@@ -24,7 +24,7 @@ impl Component for App {
         match msg {
             Msg::UserLoggedIn(name) => {
                 self.username = Some(name);
-                true // Re-render application layout to shift into the chat window
+                true 
             }
         }
     }
@@ -33,21 +33,21 @@ impl Component for App {
         let on_login = ctx.link().callback(Msg::UserLoggedIn);
 
         html! {
-            <main>
-                {
-                    match &self.username {
-                        // If no username exists in state, show the Login screen gate
-                        None => html! {
-                            <Login {on_login} />
-                        },
-                        
-                        // FIXED: Captured the valid string reference and passed it as a parameter component property
-                        Some(name) => html! {
-                            <Chat username={name.clone()} />
+            
+            <div style="min-height: 100vh; background-color: #f0f2f5; margin: 0; padding: 0; width: 100%;">
+                <main>
+                    {
+                        match &self.username {
+                            None => html! {
+                                <Login {on_login} />
+                            },
+                            Some(name) => html! {
+                                <Chat username={name.clone()} />
+                            }
                         }
                     }
-                }
-            </main>
+                </main>
+            </div>
         }
     }
 }

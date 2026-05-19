@@ -1,21 +1,19 @@
-# YewChat 💬
+## run with trunk serve
 
-> Source code for [Let’s Build a Websocket Chat Project With Rust and Yew 0.19 🦀](https://fsjohnny.medium.com/lets-build-a-websockets-project-with-rust-and-yew-0-19-60720367399f)
+# 1. Original Code
 
-## Install
+![alt text](image.png)
 
-1. Install the required toolchain dependencies:
-   ```npm i```
+explanation: it supposed to have the chat that was sent but on this case problem hasnt been fixed. And this works by syncing the port 8080 with the one in broadcast chat.
+So for this case the output is not done sadly :(. i hope i can still get points for this part. 
 
-2. Follow the YewChat post!
+# 2. Creativity
 
-## Branches
 
-This repository is divided to branches that correspond to the blog post sections:
+![alt text](image-1.png):
 
-* main - The starter code.
-* routing - The code at the end of the Routing section.
-* components-part1 - The code at the end of the Components-Phase 1 section.
-* websockets - The code at the end of the Hello Websockets! section.
-* components-part2 - The code at the end of the Components-Phase 2 section.
-* websockets-part2 - The code at the end of the WebSockets-Phase 2 section.
+For the design i implemented chatbox based on sending messages. As the backend sending the messages still doesnt work, will work on the other times as for now the yew app is not completely succeeed
+Thanks
+
+
+
